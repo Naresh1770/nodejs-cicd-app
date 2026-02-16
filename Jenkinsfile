@@ -25,7 +25,7 @@ pipeline{
     }
      stage('Build docker image'){
         steps{
-            sh 'docker image build -t nodejs:latest'
+            sh 'docker image build -t nodejs:latest .'
         }
     }
      stage('deploy'){
