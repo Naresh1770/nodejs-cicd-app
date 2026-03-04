@@ -31,7 +31,7 @@ pipeline{
      stage('deploy'){
         steps{
             sh '''
-           docker rm -f nodejs || true
+           docker rm -f nodejs-cicd || true
            docker run -d -p 3000:3000 --name nodejs-cicd nodejs:latest
             '''
         }
