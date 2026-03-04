@@ -5,8 +5,11 @@ app.get('/', (req, res) => {
   res.send('🚀 Node.js CI/CD App Deployed Successfully!');
 });
 
-const server = app.listen(3000, () => {
-  console.log('Server running on port 3000');
-});
+// Only start server if file is run directly
+if (require.main === module) {
+  app.listen(3000, () => {
+    console.log('Server running on port 3000');
+  });
+}
 
-module.exports = server;
+module.exports = app;
