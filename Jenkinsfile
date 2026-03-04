@@ -38,7 +38,7 @@ pipeline{
     }
     stage('Upload Artifact to s3'){
         steps{
-            sh '/usr/local/bin/aws s3 cp app.zip s3://naresh-node-bucket/'
+            sh 'aws s3 cp app.zip s3://naresh-node-bucket/'
         }
     }
  }
