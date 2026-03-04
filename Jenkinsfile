@@ -40,6 +40,7 @@ pipeline{
         steps{
             sh 'aws s3 cp app.zip s3://naresh-node-bucket/'
         }
+    }
  }
    post{
         success{
